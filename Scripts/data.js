@@ -1,5 +1,6 @@
 
-
+import * as XLSX from "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/+esm";
+// Determines file type and correct function
 export async function parseFile(file) {
 	const extension = file.name.split(".").pop().toLowerCase();
 
@@ -14,6 +15,7 @@ export async function parseFile(file) {
 	throw new Error("Unsupported file type");
 }
 
+// Parses a CSV file
 function parseCSV(file) {
 	return new Promise((resolve, reject) => {
 		const reader = new FileReader();
@@ -32,6 +34,7 @@ function parseCSV(file) {
 	});
 }
 
+// Parses an Excel file 
 function parseExcel(file) {
 	return new Promise((resolve, reject) => {
 		const reader = new FileReader();
@@ -41,8 +44,10 @@ function parseExcel(file) {
 			const sheet = workbook.Sheets[workbook.SheetNames[0]];
 
 			const data = XLSX.utils.sheet_to_json(sheet, { header: 1 })
+            // Flatten rows into a single array
 				.flat()
 				.map(v => Number(v))
+                // Ignore non numbers
 				.filter(v => !isNaN(v));
 
 			resolve(data);
