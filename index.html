@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Include XLSX library -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+<script type="module" src="./main.js"></script>
+<head>
+	<meta charset="UTF-8" />
+	<title>Algorithm Visualizer</title>
+
+	<!-- Link CSS -->
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+	<h1>Sorting Algorithm Visualizer</h1>
+
+<!-- Controls: buttons, sliders, dropdowns -->
+<div id="controls">
+
+	<!-- Generate random array button -->
+	<button id="generateBtn" class="btn">Generate Array</button>
+
+	<!-- Reset array button -->
+	<button id="resetBtn" class="btn">Reset Array</button>
+
+	<!-- Input for uploading CSV/Excel data -->
+	<input
+		type="file"
+		id="fileInput"
+		accept=".csv,.xlsx,.xls"
+		hidden
+	/>
+
+	<!-- Label for file input. Better for users -->
+	<label for="fileInput" class="btn">
+		Upload Data
+	</label>
+
+	<!-- Algorithm selection dropdown -->
+	<label for="algorithmSelect">Algorithm:</label>
+	<select id="algorithmSelect">
+		<option value="bubble">Bubble Sort</option>
+		<option value="selection">Selection Sort</option>
+		<option value="insertion">Insertion Sort</option>
+		<option value="merge">Merge Sort</option>
+		<option value="quick">Quick Sort</option>
+		<option value="heap">Heap Sort</option>
+	</select>
+
+	<button id="sortBtn" class="btn">Sort</button>
+
+	<!-- Volume control slider -->
+	<label for="volumeSlider">Volume Control:</label>
+	<input type="range" min="0" max="0.2" step="0.01" id="volumeSlider">
+
+	<!-- Animation speed slider -->
+	<label for="speedSlider">Animation Speed:</label>
+	<input type="range" id="speedSlider" min="1" max="100" value="50">
+	<span id="speedValue">50</span>
+
+	<!-- Timer display for sorting -->
+	<span id="timerDisplay">Time: 0.00s</span>
+
+	<!-- Download button -->
+	<button id="downloadBtn" class="btn" style="display:none;">Download CSV</button>
+
+</div>
+
+	<!-- Visual array bars -->
+	<div id="array-container"></div>
+
+	<!-- Link JavaScript -->
+	<script type="module" src="Scripts/main.js"></script>
+</body>
+</html>
