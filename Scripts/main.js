@@ -183,7 +183,9 @@ function enableControls() {
 	resetBtn.disabled = false;
 	sortBtn.disabled = false;
 	algorithmSelect.disabled = false;
-	fileInput.disabled = true;
+	fileInput.disabled = false;
+
+	// Lables need to be handled manually
 	fileLabel.classList.remove("disabled-btn");
 	fileLabel.classList.add("btn");
 }
