@@ -3,6 +3,8 @@
 An interactive, sorting algorithm visualizer built to show how common sorting algorithms work through animated bars and sounds.
 
 🔗 **Live Demo:**  
+![Demo](assets/AlgorithmDemo.gif)
+
 [https://nickd456.github.io/Sorting-Algorithm-Visualizer/](https://nickd456.github.io/Sorting-Algorithm-Visualizer/)
 
 ---
