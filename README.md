@@ -90,7 +90,3 @@ Computer Science Minor
 
 🔗 Portfolio: [https://nickd456.github.io/Portfolio/](https://nickd456.github.io/Portfolio/)  
 🔗 LinkedIn: [https://www.linkedin.com/in/nick-decinto/](https://www.linkedin.com/in/nick-decinto/)
-
----
-
-### ⭐ If you found this useful, feel free to star the repo!
